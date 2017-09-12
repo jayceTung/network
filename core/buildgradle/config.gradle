@@ -1,0 +1,76 @@
+ext {
+
+    GOOGLE_SUPPORT_LIBRARY_VERSION ="25.1.0"
+    DAGGER_VERSION = '2.0.1'
+    ROUTER_VERSION = '1.0.3-release-SNAPSHOT'
+    BUTTER_KNIFE_VERSION = '8.4.0'
+    RETROFIT_VERSION = '2.1.0'
+    OKHTTP_VERSION = '3.6.0'
+    TINKER_VERSION='1.7.7'
+
+    android = [
+            compileSdkVersion   : 26,
+            buildToolsVersion   : "26.0.0",
+            minSdkVersion       : 16,
+            targetSdkVersion    : 26
+    ]
+
+    dependencies = [
+            //基础组件
+            "design"                    : "com.android.support:design:${GOOGLE_SUPPORT_LIBRARY_VERSION}",
+            "appcompat-v7"              : "com.android.support:appcompat-v7:${GOOGLE_SUPPORT_LIBRARY_VERSION}",
+            "recyclerview-v7"           : "com.android.support:recyclerview-v7:${GOOGLE_SUPPORT_LIBRARY_VERSION}",
+            "cardview-v7"               : "com.android.support:cardview-v7:${GOOGLE_SUPPORT_LIBRARY_VERSION}",
+            "support-v4"                : "com.android.support:support-v4:${GOOGLE_SUPPORT_LIBRARY_VERSION}",
+            "support-annotations"       : "com.android.support:support-annotations:${GOOGLE_SUPPORT_LIBRARY_VERSION}",
+            "nineoldandroids"           : "com.nineoldandroids:library:2.4.0",
+            "photoview"                 : "com.github.chrisbanes.photoview:library:1.2.3",
+            "okhttp-urlconnection"      : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            "otto"                      : "com.squareup:otto:1.3.8",
+            "klog"                      : "com.github.zhaokaiqiang.klog:library:1.1.0",
+            "dagger"                    : "com.google.dagger:dagger:$DAGGER_VERSION",
+            "dagger-compiler"           : "com.google.dagger:dagger-compiler:$DAGGER_VERSION",
+            "bugtags"                   : "com.bugtags.library:bugtags-lib:latest.integration",
+            "leakcanary"                : "com.squareup.leakcanary:leakcanary-android:1.5",
+            "javax-annotation"          : "org.glassfish:javax.annotation:10.0-b28",
+            "junit"                     : 'junit:junit:4.12',
+            "networkbench"              : "com.networkbench.newlens.agent.android:nbs.newlens.agent:2.5.3",
+            "flowup"                    : "io.flowup:android-sdk:0.2.6",
+            "growingio"                 : "com.growingio.android:vds-android-agent:0.9.98@aar",
+            "eventbus"                  : "org.greenrobot:eventbus:3.0.0",
+            "butterknife"               : "com.jakewharton:butterknife:$BUTTER_KNIFE_VERSION",
+            "butterknife-compiler"      : "com.jakewharton:butterknife-compiler:$BUTTER_KNIFE_VERSION",
+            "gridPasswordView"          : "com.jungly:gridPasswordView:0.3",
+            "multidex"                  : "com.android.support:multidex:1.0.1",
+            "picasso"                   : "com.squareup.picasso:picasso:2.5.2",
+            "retrofit"                  :     "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION",
+            "converter-gson"            :  "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION",
+            "adapter-rxjava"            : "com.squareup.retrofit2:adapter-rxjava:$RETROFIT_VERSION",
+            "logging-interceptor"       : "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION",
+            "okhttp"                    : "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION",
+            "rxandroid"                 : "io.reactivex:rxandroid:1.2.1",
+            "rxjava"                    :  'io.reactivex:rxjava:1.1.8',
+            "tray"                      : 'net.grandcentrix.tray:tray:0.10.0',
+
+            "glide"                     : "com.github.bumptech.glide:glide:3.7.0",
+            "andfix"                    : "com.alipay.euler:andfix:0.4.0@aar",
+            "toolsfinal"                : 'cn.finalteam:toolsfinal:1.1.4',
+            "robolectric"               :  "org.robolectric:robolectric:3.1.2",
+            "auto-service"              : 'com.google.auto.service:auto-service:1.0-rc2',
+            "javapoet"                  : 'com.squareup:javapoet:1.7.0',
+            "gson"                      : 'com.google.code.gson:gson:2.7',
+            "tinker-lib"                : "com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}",
+            "tinker-anno"               : "com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}",
+            "tinker-plugin"             : "com.tencent.tinker:tinker-patch-gradle-plugin:${TINKER_VERSION}",
+            "android_permission"        : 'com.github.hotchemi:permissionsdispatcher:2.3.0',
+            "apt_permission"            : 'com.github.hotchemi:permissionsdispatcher-processor:2.3.0',
+            "stetho"                    : 'com.facebook.stetho:stetho:1.3.1',
+            "stetho_okhttp"             : 'com.facebook.stetho:stetho-okhttp3:1.3.1',
+            "getui"                     : 'com.getui:sdk:2.10.1.0',
+            "getui_hw"                  : 'com.getui:hwp:1.0.0',
+            "getui_mz"                  : 'com.getui:mzp:1.0.0',
+            "getui_xm"                  : 'com.getui:xmp:1.0.0',
+            "lottie"                    : 'com.airbnb.android:lottie:1.5.3',
+            "constraint-layout"          :'com.android.support.constraint:constraint-layout:1.0.2'
+    ]
+}
