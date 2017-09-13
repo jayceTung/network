@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 
-
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -56,3 +55,5 @@ dependencies {
     }
 
 }
+
+apply from: "/buildgradle/gradle-push.gradle"
