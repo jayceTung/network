@@ -1,7 +1,7 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.0.0"
+version = "1.0.1"
 
 // 定义两个链接，下面会用到。
 def siteUrl = 'https://github.com/yinte12/network' // 项目主页。
