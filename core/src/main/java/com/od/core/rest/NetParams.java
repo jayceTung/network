@@ -2,7 +2,7 @@ package com.od.core.rest;
 
 import android.content.Context;
 
-import com.od.core.Util.RestUtil;
+import com.od.core.util.RestUtil;
 
 import java.util.ArrayList;
 import java.util.List;

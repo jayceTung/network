@@ -1,6 +1,6 @@
 package com.od.core.rest.interceptor;
 
-import com.od.core.Util.NetworkUtil;
+import com.od.core.util.NetworkUtil;
 import com.od.core.rest.NetParams;
 
 import java.io.IOException;

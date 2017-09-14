@@ -1,4 +1,4 @@
-package com.od.core.Util;
+package com.od.core.util;
 
 /**
  * Created by Super on 2017/9/12.

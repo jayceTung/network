@@ -1,4 +1,4 @@
-package com.od.core.Util;
+package com.od.core.util;
 
 import android.app.Activity;
 import android.content.ComponentName;

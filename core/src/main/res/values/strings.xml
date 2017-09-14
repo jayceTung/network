@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">core</string>
+    <string name="error_net_filed">网络不可用</string>
 </resources>

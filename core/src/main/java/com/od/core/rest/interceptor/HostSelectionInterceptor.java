@@ -1,4 +1,4 @@
-package com.od.core.rest;
+package com.od.core.rest.interceptor;
 
 import java.io.IOException;
 
