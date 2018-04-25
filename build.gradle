@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-apply from: '/core/buildgradle/config.gradle'
+apply from: './core/gradleconfig/config.gradle'
 
 buildscript {
     repositories {

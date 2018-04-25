@@ -56,4 +56,4 @@ dependencies {
 
 }
 
-apply from: "/buildgradle/gradle-push.gradle"
+apply from: "./gradleconfig/gradle-push.gradle"
