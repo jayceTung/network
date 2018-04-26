@@ -104,6 +104,10 @@ public class NetParams {
         return sNetParams;
     }
 
+    public Context getApplicationContext() {
+        return mApplicationContext;
+    }
+
     public String getHttpHost() {
         return httpHost;
     }

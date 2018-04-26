@@ -136,6 +136,16 @@ public class KDBean {
         public void setLocation(Object location) {
             this.location = location;
         }
+
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "time='" + time + '\'' +
+                    ", ftime='" + ftime + '\'' +
+                    ", context='" + context + '\'' +
+                    ", location=" + location +
+                    '}';
+        }
     }
 
     @Override
