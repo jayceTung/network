@@ -6,16 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.od.core.Rest;
+import com.od.core.NetPost;
 import com.od.core.observer.NetSubscriber;
 import com.od.core.observer.transformer.Transformer;
-import com.od.core.rest.NetParams;
-
-import rx.Observable;
-import rx.Scheduler;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
@@ -32,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Rest.getInstance().create(KDService.class)
+                NetPost.getInstance().create(KDService.class)
                         .getCoupons("yuantong", "11111111111")
                         .compose(Transformer.<KDBean>defaultSchedulers())
                         .subscribe(new NetSubscriber<KDBean>() {

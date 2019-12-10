@@ -19,23 +19,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by Super on 2017/9/12.
  */
 
-public class Rest {
-    private static Rest sRest;
+public class NetPost {
+    private static NetPost sPost;
     private Retrofit mRetrofit;
 
-    public static Rest getInstance() {
-        if (sRest == null) {
-            synchronized (Rest.class) {
-                if (sRest == null) {
+    public static NetPost getInstance() {
+        if (sPost == null) {
+            synchronized (NetPost.class) {
+                if (sPost == null) {
                     NetParams.getInstance();//must to init NetParams
-                    sRest = new Rest();
+                    sPost = new NetPost();
                 }
             }
         }
-        return sRest;
+        return sPost;
     }
 
-    private Rest() {
+    private NetPost() {
         initRest();
     }
 
