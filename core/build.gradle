@@ -17,6 +17,11 @@ android {
         abortOnError false
     }
 
+    compileOptions {
+        sourceCompatibility rootProject.ext.android.javaVersion
+        targetCompatibility rootProject.ext.android.javaVersion
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -28,29 +33,29 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile rootProject.ext.dependencies["converter-gson"]
-    compile (rootProject.ext.dependencies["adapter-rxjava"]) {
+    api rootProject.ext.dependencies["converter-gson"]
+    api (rootProject.ext.dependencies["adapter-rxjava"]) {
         exclude(group: 'io.reactivex', module:'rxjava')
     }
 
 
-//    compile 'com.github.ihsanbal:LoggingInterceptor:1.0.4'
-    compile (rootProject.ext.dependencies["logging-interceptor"])
-    compile rootProject.ext.dependencies["okhttp"]
+//    api 'com.github.ihsanbal:LoggingInterceptor:1.0.4'
+    api (rootProject.ext.dependencies["logging-interceptor"])
+    api rootProject.ext.dependencies["okhttp"]
 
-    compile rootProject.ext.dependencies["rxjava"]
-    compile (rootProject.ext.dependencies["rxandroid"]) {
+    api rootProject.ext.dependencies["rxjava"]
+    api (rootProject.ext.dependencies["rxandroid"]) {
         exclude(group: 'io.reactivex', module:'rxjava')
     }
-    compile rootProject.ext.dependencies["support-annotations"]
-    compile (rootProject.ext.dependencies["tray"]) {
+    api rootProject.ext.dependencies["support-annotations"]
+    api (rootProject.ext.dependencies["tray"]) {
         exclude(group: 'com.android.support', module:'support-annotations')
     }
 
-    testCompile rootProject.ext.dependencies["junit"]
-    compile (rootProject.ext.dependencies["retrofit"]) {
+    testImplementation rootProject.ext.dependencies["junit"]
+    api (rootProject.ext.dependencies["retrofit"]) {
         exclude(group: 'com.squareup.okhttp3', module:'okhttp')
     }
 
