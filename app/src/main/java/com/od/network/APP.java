@@ -24,7 +24,7 @@ public class APP extends Application {
         list.add(new HeaderInterceptor());
 
         NetParams.initInstance(new NetParams.Builder(getApplicationContext())
-                .httpHost("http://www.kuaidi100.com")
+                .httpHost(Constants.KEY_POST_URL)
                 .interceptors(list)
                 .isRelease(false)
                 .build());

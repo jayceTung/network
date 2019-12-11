@@ -6,6 +6,15 @@ import android.os.Build;
 
 import com.od.core.rest.NetParams;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
+import java.util.Map;
+
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+
 /**
  * Created by Super on 2017/9/12.
  */
@@ -57,5 +66,22 @@ public class RestUtil {
 
     public static String getPhoneInfo() {
         return Build.BRAND + "_" + Build.MODEL + "_" + Build.VERSION.RELEASE;
+    }
+
+    public static RequestBody getBody(Map<String, Object> map) {
+        MediaType mediaType = MediaType.parse("application/json;charset=UTF-8");
+        JSONObject jsonObject = new JSONObject();
+        try {
+            Iterator<Map.Entry<String, Object>> it = map.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry<String, Object> entry = it.next();
+                jsonObject.put(entry.getKey(), entry.getValue());
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        String str = jsonObject.toString();
+
+        return RequestBody.create(mediaType, str);
     }
 }
